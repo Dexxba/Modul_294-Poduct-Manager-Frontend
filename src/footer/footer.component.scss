@@ -1,0 +1,23 @@
+/* Styling for pm-footer */
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh; /* Adjust height as needed */
+}
+
+/* Centering text within mat-toolbar */
+mat-toolbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Set width to 100% for horizontal centering */
+}
+
+/* Styling text within the span element */
+mat-toolbar span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Set width to 100% to center text within mat-toolbar */
+}
