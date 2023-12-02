@@ -1,26 +1,9 @@
-/* Setting height and overflow for HTML and body elements */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden; /* Prevents default scrolling behavior */
-}
-
-/* Styles for the main content area */
-.main-content {
-  height:87vh;
+.full-height {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
 }
 
-/* Styles for the main element */
-main {
-  flex: 1; /* Allows main content to expand to fill available space */
-  overflow-y: auto; /* Allows vertical scrolling within the main content */
-}
-
-/* Styles for pm-footer */
-pm-footer {
-  flex-shrink: 0; /* Prevents footer from shrinking */
+main{
+  flex-grow: 1;
 }

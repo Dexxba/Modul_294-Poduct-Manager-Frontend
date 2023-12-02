@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import {HeaderComponent} from "../header/header.component";
-import {FooterComponent} from "../footer/footer.component";
+import {HeaderComponent} from "./elements/header/header.component";
+import {FooterComponent} from "./elements/footer/footer.component";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
