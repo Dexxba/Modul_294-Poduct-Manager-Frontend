@@ -1,1 +1,60 @@
-<p>register works!</p>
+<div class="login-container">
+  <form class="login-form" (ngSubmit)="submit()">
+    <h2>Registration</h2>
+    <div class="input-container">
+      <input [formControl]="fromGroup.controls.firstName" type="text" placeholder="First Name" required>
+      <mat-error *ngIf="fromGroup.controls.firstName.hasError('required') && fromGroup.controls.firstName.touched">
+        The field is not allowed to be empty
+      </mat-error>
+    </div>
+    <div class="input-container">
+      <input [formControl]="fromGroup.controls.lastName" type="text" placeholder="Last Name" required>
+      <mat-error *ngIf="fromGroup.controls.lastName.hasError('required') && fromGroup.controls.lastName.touched">
+        The field is not allowed to be empty
+      </mat-error>
+    </div>
+    <div class="input-container">
+      <input [formControl]="fromGroup.controls.street" type="text" placeholder="Street Name" required>
+      <mat-error *ngIf="fromGroup.controls.street.hasError('required') && fromGroup.controls.street.touched">
+        The field is not allowed to be empty
+      </mat-error>
+    </div>
+    <div class="input-container">
+      <input [formControl]="fromGroup.controls.zip" type="text" placeholder="Zip Name" required>
+      <mat-error *ngIf="fromGroup.controls.zip.hasError('required') && fromGroup.controls.zip.touched">
+        The field is not allowed to be empty
+      </mat-error>
+    </div>
+    <div class="input-container">
+      <input [formControl]="fromGroup.controls.city" type="text" placeholder="City Name" required>
+      <mat-error *ngIf="fromGroup.controls.city.hasError('required') && fromGroup.controls.city.touched">
+        The field is not allowed to be empty
+      </mat-error>
+    </div>
+    <div class="input-container">
+      <input [formControl]="fromGroup.controls.country" type="text" placeholder="Country Name" required>
+      <mat-error *ngIf="fromGroup.controls.country.hasError('required') && fromGroup.controls.country.touched">
+        The field is not allowed to be empty
+      </mat-error>
+    </div>
+    <div class="input-container">
+      <input [formControl]="fromGroup.controls.mobilePhone" type="text" placeholder="Mobile Phone" required>
+      <mat-error *ngIf="fromGroup.controls.mobilePhone.hasError('required') && fromGroup.controls.mobilePhone.touched">
+        The field is not allowed to be empty
+      </mat-error>
+    </div>
+    <div class="input-container">
+      <input [formControl]="fromGroup.controls.email" type="text" placeholder="email" required>
+      <mat-error *ngIf="fromGroup.controls.email.hasError('required') && fromGroup.controls.email.touched">
+        The field is not allowed to be empty
+      </mat-error>
+    </div>
+    <div class="input-container">
+      <input [formControl]="fromGroup.controls.password" type="text" placeholder="password" required>
+      <mat-error *ngIf="fromGroup.controls.password.hasError('required') && fromGroup.controls.password.touched">
+        The field is not allowed to be empty
+      </mat-error>
+    </div>
+    <button type="submit">Register</button>
+  </form>
+</div>
