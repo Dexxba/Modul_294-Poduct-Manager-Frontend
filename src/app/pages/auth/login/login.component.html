@@ -1,0 +1,22 @@
+<div class="login-container">
+  <form class="login-form" (ngSubmit)="submit()">
+    <h2>Login</h2>
+    <div class="input-container">
+      <input [formControl]="fromGroup.controls.email" type="email" placeholder="Email" required>
+      <mat-error *ngIf="fromGroup.controls.email.hasError('required')&&fromGroup.controls.email.touched">
+        The field is not allowed to be empty
+      </mat-error>
+      <mat-error *ngIf="fromGroup.controls.email.hasError('pattern')&&fromGroup.controls.email.touched">
+        Must be a valid Email address.
+      </mat-error>
+    </div>
+    <div class="input-container">
+      <input [formControl]="fromGroup.controls.password" type="password" placeholder="Password" required>
+    </div>
+    <button class="loginButton" type="submit">Login</button>
+    <button class="registerButton" routerLink="/auth/register" type="submit">Register</button>
+  </form>
+</div>
+
+
+
