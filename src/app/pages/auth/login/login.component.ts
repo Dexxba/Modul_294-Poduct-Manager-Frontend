@@ -24,8 +24,8 @@ export class LoginComponent {
       this.userControllerService.login({
         email: this.fromGroup.controls.email.value,
         password:this.fromGroup.controls.password.value
-      }).subscribe(value => {
-
+      }).subscribe((response) => {
+      localStorage.setItem("ACCSES_TOKEN",response.token!);
       })
     }
   }
