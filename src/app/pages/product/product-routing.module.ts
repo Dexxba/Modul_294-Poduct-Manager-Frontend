@@ -12,7 +12,7 @@ const routes: Routes = [
     loadComponent:() => import("./product-modify/product-modify.component").then(value => value.ProductModifyComponent)
   },
   {
-    path:"create",
+    path:"edit/create",
     loadComponent:() => import("./product-modify/product-modify.component").then(value => value.ProductModifyComponent),
     canActivate:[adminStrongGuard]
   },

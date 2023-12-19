@@ -12,7 +12,7 @@ const routes: Routes = [
     loadComponent:() => import("./category-modify/category-modify.component").then(value => value.CategoryModifyComponent)
   },
   {
-    path:"create",
+    path:"edit/create",
     loadComponent:() => import("./category-modify/category-modify.component").then(value => value.CategoryModifyComponent),
     canActivate:[adminStrongGuard]
   }
