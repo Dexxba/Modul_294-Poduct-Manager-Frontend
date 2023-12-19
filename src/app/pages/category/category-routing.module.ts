@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import {adminStrongGuard} from "../auth/guard/admin-strong.guard";
 
 const routes: Routes = [
   {
@@ -12,7 +13,8 @@ const routes: Routes = [
   },
   {
     path:"create",
-    loadComponent:() => import("./category-modify/category-modify.component").then(value => value.CategoryModifyComponent)
+    loadComponent:() => import("./category-modify/category-modify.component").then(value => value.CategoryModifyComponent),
+    canActivate:[adminStrongGuard]
   }
 ];
 
