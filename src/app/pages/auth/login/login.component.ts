@@ -15,8 +15,8 @@ import {RouterLink} from "@angular/router";
 export class LoginComponent {
 
   fromGroup = new FormGroup({
-    email: new FormControl(null, [Validators.pattern(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,10}$/),Validators.required]),
-    password: new FormControl(null,Validators.required)
+    email: new FormControl("", [Validators.pattern(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,10}$/),Validators.required]),
+    password: new FormControl("",Validators.required)
   })
   submit(){
     console.log(this.fromGroup);
@@ -25,7 +25,7 @@ export class LoginComponent {
         email: this.fromGroup.controls.email.value,
         password:this.fromGroup.controls.password.value
       }).subscribe((response) => {
-      localStorage.setItem("ACCSES_TOKEN",response.token!);
+      localStorage.setItem("ACCESS_TOKEN",response.token!);
       })
     }
   }

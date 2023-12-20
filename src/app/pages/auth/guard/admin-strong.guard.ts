@@ -1,16 +1,14 @@
 import { CanActivateFn, Router } from '@angular/router';
 import {jwtDecode} from 'jwt-decode';
+import {inject} from "@angular/core";
 
 interface TokenCheck {
-  sub: string;
   roles: string[];
-  exp: number;
-  iat: number;
-  email: string;
+
 }
 
 export const adminStrongGuard: CanActivateFn = (route, state) => {
-  const router = new Router();
+  const router = inject(Router);
 
   try {
     const token = localStorage.getItem('ACCESS_TOKEN');
@@ -24,6 +22,8 @@ export const adminStrongGuard: CanActivateFn = (route, state) => {
     }
   } catch (error) {
     console.error('Error decoding token', error);
+    router.navigate(['/auth/login']);
+    return false;
   }
 
   router.navigate(['/auth/login']);
