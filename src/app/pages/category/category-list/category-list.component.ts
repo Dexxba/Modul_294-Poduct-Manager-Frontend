@@ -1,7 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {CategoryControllerService, CategoryShowDto} from "../../../openapi-client";
-import {RouterLink} from "@angular/router";
+import {Router, RouterLink} from "@angular/router";
 
 @Component({
   selector: 'pm-category-list',
@@ -12,7 +12,7 @@ import {RouterLink} from "@angular/router";
 })
 export class CategoryListComponent  implements OnInit{
   categoryShowDto: CategoryShowDto[]=[];
-  constructor(private categoryControllerService:CategoryControllerService) {
+  constructor(private categoryControllerService:CategoryControllerService,private router: Router,) {
   }
 
   ngOnInit(): void {
@@ -20,5 +20,12 @@ export class CategoryListComponent  implements OnInit{
     this.categoryShowDto = categories;
     },
       (e)=>{console.error(e)});
+  }
+  delete(Id:number) {
+      this.categoryControllerService.deleteCategoryById(Id)
+      .subscribe(value => {
+        this.router.navigateByUrl("/category/list")
+      });
+
   }
 }

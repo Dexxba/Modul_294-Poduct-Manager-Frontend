@@ -12,7 +12,7 @@
       <td>{{ category.name }}</td>
       <td>
         <button class="edit-button">✏️</button>
-        <button class="delete-button">🗑️</button>
+        <button (click)="delete(category.id)" class="delete-button">🗑️</button>
       </td>
     </tr>
     </tbody>
