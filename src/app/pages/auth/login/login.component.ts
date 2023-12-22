@@ -3,7 +3,8 @@ import {CommonModule} from '@angular/common';
 import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
 import {UserControllerService} from "../../../openapi-client";
-import {RouterLink} from "@angular/router";
+import {Router, RouterLink} from "@angular/router";
+import {ToastrService} from "ngx-toastr";
 
 @Component({
   selector: 'pm-login',
@@ -26,10 +27,14 @@ export class LoginComponent {
         password:this.fromGroup.controls.password.value
       }).subscribe((response) => {
       localStorage.setItem("ACCESS_TOKEN",response.token!);
+      this.router.navigate(["/product/list"]).then(()=>{this.ShowSuccess()})
       })
     }
   }
-  constructor(private readonly userControllerService :UserControllerService) {
+  constructor(private readonly userControllerService :UserControllerService,private toastr:ToastrService,private router:Router) {
+  }
+  ShowSuccess(){
+    this.toastr.success("Login is Successful")
   }
 
 }
