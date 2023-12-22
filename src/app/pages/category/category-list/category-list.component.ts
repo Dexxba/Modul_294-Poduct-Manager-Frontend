@@ -1,11 +1,12 @@
 import { Component,OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {CategoryControllerService, CategoryShowDto} from "../../../openapi-client";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'pm-category-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './category-list.component.html',
   styleUrl: './category-list.component.scss'
 })

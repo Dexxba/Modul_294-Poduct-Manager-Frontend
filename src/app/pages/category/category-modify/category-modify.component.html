@@ -1,1 +1,22 @@
-<p>category-modify works!</p>
+<div class="Category-container">
+  <form class="category-form" (ngSubmit)="submit()">
+    <h2>Create Category</h2>
+    <div class="input-container">
+      <input [formControl]="fromGroup.controls.active" type="text" placeholder="Is Active" required>
+      <mat-error *ngIf="fromGroup.controls.active.hasError('required') && fromGroup.controls.active.touched">
+        The field is not allowed to be empty
+      </mat-error>
+    </div>
+    <div class="input-container">
+      <input [formControl]="fromGroup.controls.name" type="text" placeholder="Category Name" required>
+      <mat-error *ngIf="fromGroup.controls.name.hasError('required') && fromGroup.controls.name.touched">
+        The field is not allowed to be empty
+      </mat-error>
+    </div>
+    <button class="createButton" type="submit" routerLink="/category/list">Create</button>
+    <button class="backButton" type="submit" routerLink="/category/list">Back</button>
+  </form>
+</div>
+
+
+
