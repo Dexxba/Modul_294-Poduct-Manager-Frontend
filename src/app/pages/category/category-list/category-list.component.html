@@ -1,1 +1,21 @@
-<p>category-list works!</p>
+<div class="categories-container">
+  <h2>Categories list</h2>
+  <table>
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Editor</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let category of categoryShowDto">
+      <td>{{ category.name }}</td>
+      <td>
+        <button class="edit-button">✏️</button>
+        <button class="delete-button">🗑️</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <button class="create-category-button">Create category</button>
+</div>

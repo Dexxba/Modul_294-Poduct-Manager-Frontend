@@ -8,10 +8,6 @@ const routes: Routes = [
     loadComponent:() => import("./product-list/product-list.component").then(value => value.ProductListComponent)
   },
   {
-    path:"id",
-    loadComponent:() => import("./product-modify/product-modify.component").then(value => value.ProductModifyComponent)
-  },
-  {
     path:"edit/create",
     loadComponent:() => import("./product-modify/product-modify.component").then(value => value.ProductModifyComponent),
     canActivate:[adminStrongGuard]
