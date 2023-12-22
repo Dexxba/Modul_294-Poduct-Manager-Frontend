@@ -24,8 +24,7 @@ export class CategoryListComponent  implements OnInit{
   delete(Id:number) {
       this.categoryControllerService.deleteCategoryById(Id)
       .subscribe(value => {
-        this.router.navigateByUrl("/category/list")
+        this.ngOnInit();
       });
-
   }
 }

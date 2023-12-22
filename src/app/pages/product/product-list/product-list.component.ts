@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {RouterLink, RouterOutlet} from "@angular/router";
+import {Router, RouterLink, RouterOutlet} from "@angular/router";
 import {
   CategoryControllerService,
   CategoryShowDto,
@@ -17,12 +17,19 @@ import {
 })
 export class ProductListComponent implements OnInit{
   productShowDto: ProductShowDto[]=[];
-  constructor(private productControllerService:ProductControllerService) {
+  constructor(private productControllerService:ProductControllerService,private router:Router) {
   }
   ngOnInit(): void {
     this.productControllerService.getAllProducts().subscribe((products)=>{
         this.productShowDto = products;
       },
       (e)=>{console.error(e)});
+  }
+  delete(Id:number) {
+    this.productControllerService.deleteProductById(Id)
+      .subscribe(value => {
+        this.ngOnInit();
+      });
+
   }
 }
