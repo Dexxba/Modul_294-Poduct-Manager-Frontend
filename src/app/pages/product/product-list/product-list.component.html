@@ -1,2 +1,29 @@
-<p>product-list works!</p>
-<router-outlet></router-outlet>
+<div class="product-container">
+  <h2>Product list</h2>
+  <table>
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Sku</th>
+      <th>Stock</th>
+      <th>Editor</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let product of productShowDto">
+      <td>{{product.name}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.sku}}</td>
+      <td>{{product.stock}}</td>
+      <td>
+        <div class="button-container">
+          <button class="edit-button">✏️</button>
+          <button class="delete-button">🗑️</button>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <button class="create-product-button" routerLink="/product/edit/create" type="submit">Create product</button>
+</div>
