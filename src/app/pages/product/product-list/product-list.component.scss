@@ -1,7 +1,7 @@
 .product-container {
   display: flex;
   flex-direction: column;
-  max-width: 600px;
+  max-width: 1200px; /* Povećana širina kontejnera */
   margin: auto;
   margin-top: 40px;
 
@@ -12,61 +12,46 @@
     font-size: 27px;
   }
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grid raspored */
+    grid-gap: 20px;
+  }
 
-    thead {
-      tr {
-        th {
-          text-align: left;
-          padding: 15px 20px;
-          background-color: #f4f4f4;
-          border-bottom: 2px solid #ddd;
-        }
-      }
+  .product-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+
+    .product-info {
+      margin-bottom: 20px;
     }
 
-    tbody {
-      tr {
-        &:nth-child(odd) {
-          background-color: #fafafa;
-        }
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
 
-        td {
-          padding: 10px 20px;
-          border-bottom: 1px solid #eee;
+    .edit-button, .delete-button {
+      cursor: pointer;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      background-color: #eee;
+      &:hover {
+        background-color: #ddd;
+      }
 
-          &:last-child {
-            .button-container {
-              display: flex;
-              justify-content: center;
+      .edit-button {
+        color: #017bff;
+      }
 
-              .edit-button,
-              .delete-button {
-                cursor: pointer;
-                border: none;
-                padding: 8px 12px;
-                margin-left: 5px;
-                margin-right: 5px;
-                border-radius: 4px;
-                background-color: #eee;
-                &:hover {
-                  background-color: #ddd;
-                }
-              }
-
-              .edit-button {
-                color: #017bff;
-              }
-
-              .delete-button {
-                color: #ff4141;
-              }
-            }
-          }
-        }
+      .delete-button {
+        color: #ff4141;
       }
     }
   }
