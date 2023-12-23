@@ -1,72 +1,82 @@
+/* Main container for the product management interface */
 .product-container {
-  display: flex;
-  flex-direction: column;
-  max-width: 1200px; /* Povećana širina kontejnera */
-  margin: auto;
-  margin-top: 40px;
+  display: flex; /* Flexbox layout for vertical alignment */
+  flex-direction: column; /* Arranging child elements in a column */
+  max-width: 1200px; /* Increased maximum width for the container */
+  margin: auto; /* Centering the container horizontally */
+  margin-top: 40px; /* Top margin for spacing */
 
+  /* Style for the heading */
   h2 {
-    margin-bottom: 20px;
-    text-align: center;
-    color: #333;
-    font-size: 27px;
+    margin-bottom: 20px; /* Bottom margin for spacing */
+    text-align: center; /* Center-aligning the text */
+    color: #333; /* Dark grey color for the text */
+    font-size: 27px; /* Font size for the heading */
   }
 
+  /* Grid layout for product cards */
   .products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grid raspored */
-    grid-gap: 20px;
+    display: grid; /* Using CSS Grid for layout */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid columns */
+    grid-gap: 20px; /* Space between grid items */
   }
 
+  /* Style for each product card */
   .product-card {
-    background-color: #fff;
-    border: 1px solid #eee;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
+    background-color: #fff; /* White background for the cards */
+    border: 1px solid #eee; /* Light grey border */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Shadow for depth effect */
+    border-radius: 10px; /* Rounded corners for the cards */
+    padding: 20px; /* Padding inside the cards */
+    text-align: center; /* Center-aligning text */
 
+    /* Style for product information section */
     .product-info {
-      margin-bottom: 20px;
+      margin-bottom: 20px; /* Bottom margin for spacing */
     }
 
+    /* Container for buttons */
     .button-container {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
+      display: flex; /* Flexbox for horizontal layout */
+      justify-content: center; /* Center-aligning the buttons */
+      gap: 10px; /* Space between buttons */
     }
 
+    /* Shared style for edit and delete buttons */
     .edit-button, .delete-button {
-      cursor: pointer;
-      border: none;
-      padding: 8px 12px;
-      border-radius: 4px;
-      background-color: #eee;
+      cursor: pointer; /* Pointer cursor on hover */
+      border: none; /* No border for the buttons */
+      padding: 8px 12px; /* Padding inside the buttons */
+      border-radius: 4px; /* Rounded corners for the buttons */
+      background-color: #eee; /* Light grey background */
       &:hover {
-        background-color: #ddd;
+        background-color: #ddd; /* Slightly darker background on hover */
       }
+    }
 
-      .edit-button {
-        color: #017bff;
-      }
+    /* Specific style for the edit button */
+    .edit-button {
+      color: #017bff; /* Blue color */
+    }
 
-      .delete-button {
-        color: #ff4141;
-      }
+    /* Specific style for the delete button */
+    .delete-button {
+      color: #ff4141; /* Red color */
     }
   }
 
+  /* Style for the create product button */
   .create-product-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    background-color: #017bff;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
+    margin-top: 20px; /* Top margin for spacing */
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* No border for the button */
+    border-radius: 4px; /* Rounded corners for the button */
+    background-color: #017bff; /* Blue background color */
+    color: white; /* White text color */
+    font-size: 16px; /* Font size for the text */
+    cursor: pointer; /* Pointer cursor on hover */
     &:hover {
-      background-color: #4cae4c;
+      background-color: #4cae4c; /* Green color on hover */
     }
   }
 }

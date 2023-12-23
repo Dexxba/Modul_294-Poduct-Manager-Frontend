@@ -1,18 +1,34 @@
+<!-- Main container for the product list -->
 <div class="product-container">
+  <!-- Heading for the product list -->
   <h2>Product list</h2>
+
+  <!-- Grid layout for product cards -->
   <div class="products-grid">
+    <!-- Loop over each product in the productShowDto array -->
     <div *ngFor="let product of productShowDto" class="product-card">
+      <!-- Container for displaying product information -->
       <div class="product-info">
-        <p><strong>Name:</strong> {{product.name}}</p>
-        <p><strong>Price:</strong> {{product.price}}</p>
-        <p><strong>Sku:</strong> {{product.sku}}</p>
-        <p><strong>Stock:</strong> {{product.stock}}</p>
+        <!-- Displaying the product's name -->
+        <p><strong>Name:</strong> {{ product.name }}</p>
+        <!-- Displaying the product's price -->
+        <p><strong>Price:</strong> {{ product.price }}</p>
+        <!-- Displaying the product's SKU (Stock Keeping Unit) -->
+        <p><strong>Sku:</strong> {{ product.sku }}</p>
+        <!-- Displaying the product's stock availability -->
+        <p><strong>Stock:</strong> {{ product.stock }}</p>
       </div>
+
+      <!-- Container for action buttons -->
       <div class="button-container">
+        <!-- Edit button (functionality not shown in the snippet) -->
         <button class="edit-button">✏️</button>
+        <!-- Delete button with a click event bound to the delete method -->
         <button (click)="delete(product.id)" class="delete-button">🗑️</button>
       </div>
     </div>
   </div>
+
+  <!-- Button for creating a new product, with a routerLink for navigation -->
   <button class="create-product-button" routerLink="/product/edit/create" type="submit">Create product</button>
 </div>
