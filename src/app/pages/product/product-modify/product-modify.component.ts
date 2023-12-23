@@ -37,7 +37,6 @@ export class ProductModifyComponent {
 
   // Method to handle form submission.
   submit() {
-    console.log(this.fromGroup); // Logging the form group for debugging.
     if (this.fromGroup.valid) {
       // If the form is valid, call the createProduct method with form data.
       this.productControllerService.createProduct({
@@ -55,6 +54,7 @@ export class ProductModifyComponent {
       });
     }
   }
+
 
   // Constructor for dependency injection.
   constructor(

@@ -31,7 +31,6 @@ export class CategoryModifyComponent {
 
   // Method to handle form submission.
   submit() {
-    console.log(this.fromGroup); // Logging the form group for debugging.
     if (this.fromGroup.valid) {
       // If the form is valid, call the createCategory method with form data.
       this.categoryControllerService.createCategory({
