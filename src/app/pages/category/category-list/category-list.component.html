@@ -1,21 +1,33 @@
+<!-- Container for the categories list -->
 <div class="categories-container">
+  <!-- Heading for the category list -->
   <h2>Categories list</h2>
+
+  <!-- Table structure for displaying categories -->
   <table>
+    <!-- Table header -->
     <thead>
     <tr>
-      <th>Name</th>
-      <th>Editor</th>
+      <th>Name</th> <!-- Column header for category names -->
+      <th>Editor</th> <!-- Column header for edit/delete actions -->
     </tr>
     </thead>
+
+    <!-- Table body -->
     <tbody>
+    <!-- Loop through each category in categoryShowDto -->
     <tr *ngFor="let category of categoryShowDto">
-      <td>{{ category.name }}</td>
+      <td>{{ category.name }}</td> <!-- Displaying the name of the category -->
       <td>
+        <!-- Edit button for the category -->
         <button class="edit-button">✏️</button>
+        <!-- Delete button for the category, with a click event bound to the delete method -->
         <button (click)="delete(category.id)" class="delete-button">🗑️</button>
       </td>
     </tr>
     </tbody>
   </table>
+
+  <!-- Button to create a new category, linked to the route '/category/edit/create' -->
   <button class="create-category-button" routerLink="/category/edit/create" type="submit">Create category</button>
 </div>

@@ -1,83 +1,94 @@
+/* Container for the categories list */
 .categories-container {
-  display: flex;
-  flex-direction: column;
-  max-width: 600px; // Set a max-width for the container
-  margin: auto; // Center the container on the page
-  margin-top: 40px;
+  display: flex; /* Using Flexbox for layout */
+  flex-direction: column; /* Arranging child elements in a vertical column */
+  max-width: 600px; /* Setting a maximum width for the container */
+  margin: auto; /* Centering the container horizontally */
+  margin-top: 40px; /* Adding space above the container */
 
+  /* Styling for the heading */
   h2 {
-    margin-bottom: 20px;
-    text-align: center;
-    color: #333;
-    font-size: 27px;
+    margin-bottom: 20px; /* Space below the heading */
+    text-align: center; /* Center-aligning the text */
+    color: #333; /* Dark grey color for text */
+    font-size: 27px; /* Font size for the heading */
   }
 
+  /* Styling for the table */
   table {
-    width: 100%;
-    border-collapse: collapse;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1); // Add some shadow to lift the table off the page
+    width: 100%; /* Table width set to fill its container */
+    border-collapse: collapse; /* Collapsing table borders */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Adding a subtle shadow to the table */
 
+    /* Styling for the table header */
     thead {
       tr {
         th {
-          text-align: left;
-          padding: 15px 20px;
-          background-color: #f4f4f4; // Light grey background for the table header
-          border-bottom: 2px solid #ddd; // Separator for header
+          text-align: left; /* Left-aligning header text */
+          padding: 15px 20px; /* Padding within table headers */
+          background-color: #f4f4f4; /* Light grey background for headers */
+          border-bottom: 2px solid #ddd; /* Bottom border for header separation */
         }
       }
     }
 
+    /* Styling for the table body */
     tbody {
       tr {
+        /* Zebra striping for table rows */
         &:nth-child(odd) {
-          background-color: #fafafa; // Zebra striping for rows
+          background-color: #fafafa; /* Light background for odd rows */
         }
 
         td {
-          padding: 10px 20px;
-          border-bottom: 1px solid #eee; // Light separator for rows
+          padding: 10px 20px; /* Padding within table cells */
+          border-bottom: 1px solid #eee; /* Bottom border for cell separation */
 
+          /* Styling for the last cell in each row (for action buttons) */
           &:last-child {
-            text-align: right; // Align the action buttons to the right
+            text-align: right; /* Right-aligning content in the last cell */
           }
         }
       }
     }
   }
 
+  /* Shared styling for edit and delete buttons */
   .edit-button,
   .delete-button {
-    cursor: pointer;
-    border: none;
-    padding: 8px 12px;
-    margin-right: 10px;
-    border-radius: 4px;
-    background-color: #eee; // Neutral background for buttons
+    cursor: pointer; /* Pointer cursor on hover */
+    border: none; /* No border for buttons */
+    padding: 8px 12px; /* Padding inside the buttons */
+    margin-right: 10px; /* Margin to the right of the buttons */
+    border-radius: 4px; /* Rounded corners for the buttons */
+    background-color: #eee; /* Neutral grey background for buttons */
     &:hover {
-      background-color: #ddd; // Slight darkening on hover
+      background-color: #ddd; /* Slightly darker background on hover */
     }
   }
 
+  /* Specific styling for the edit button */
   .edit-button {
-    color: #017bff; // Blue color for the edit button
+    color: #017bff; /* Blue color for the edit button */
   }
 
+  /* Specific styling for the delete button */
   .delete-button {
-    color: #ff4141; // Red color for the delete button
+    color: #ff4141; /* Red color for the delete button */
   }
 
+  /* Styling for the create category button */
   .create-category-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    background-color: #017bff; // Green background for the primary action
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
+    margin-top: 20px; /* Space above the button */
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* No border for the button */
+    border-radius: 4px; /* Rounded corners for the button */
+    background-color: #017bff; /* Blue background color for the button */
+    color: white; /* White text color */
+    font-size: 16px; /* Font size for the button text */
+    cursor: pointer; /* Pointer cursor on hover */
     &:hover {
-      background-color: #4cae4c; // Darken the green on hover
+      background-color: #4cae4c; /* Darker green background on hover */
     }
   }
 }
