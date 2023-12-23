@@ -1,56 +1,67 @@
+/* Styling for the container that wraps the login form */
 .login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  display: flex; /* Using Flexbox for layout */
+  justify-content: center; /* Centering content horizontally */
+  align-items: center; /* Centering content vertically */
+  height: 100vh; /* Full viewport height */
 }
 
+/* Styling for the login form itself */
 .login-form {
-  background-color: #f5f5f5;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  max-width: 80%;
-  margin: auto;
+  background-color: #f5f5f5; /* Light gray background */
+  padding: 30px; /* Padding around the form */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: 300px; /* Fixed width */
+  max-width: 80%; /* Responsive max-width */
+  margin: auto; /* Center the form in the container */
 
+  /* Style for the heading in the form */
   h2 {
-    text-align: center;
+    text-align: center; /* Center-align the text */
   }
 
+  /* Styling for container of input elements */
   .input-container {
-    margin-bottom: 33px;
+    margin-bottom: 33px; /* Space below each input container */
   }
 
+  /* Style for email and password input fields */
   input[type="email"],
   input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+    width: 100%; /* Full width of the container */
+    padding: 10px; /* Padding inside the inputs */
+    border-radius: 4px; /* Slightly rounded corners for inputs */
+    border: 1px solid #ccc; /* Light gray border */
   }
 
+  /* Style for the submit button */
   button[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    background-color: #3498db;
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-    box-shadow: 0 9px 4px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    width: 100%; /* Full width of the container */
+    padding: 10px; /* Padding inside the button */
+    border: none; /* No border */
+    border-radius: 4px; /* Slightly rounded corners */
+    background-color: #3498db; /* Blue background */
+    color: white; /* White text */
+    text-transform: uppercase; /* Uppercase text */
+    font-weight: bold; /* Bold font */
+    box-shadow: 0 9px 4px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
   }
 
+  /* Hover effect for the submit button */
   button[type="submit"]:hover {
-    background-color: #2980b9;
+    background-color: #2980b9; /* Darker blue on hover */
   }
 }
+
+/* Style for error messages */
 mat-error {
-  color: red;
+  color: red; /* Red color for error messages */
 }
+
+/* Additional style for the login button */
 .loginButton{
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* Space below the login button */
 }

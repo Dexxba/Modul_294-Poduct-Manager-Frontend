@@ -1,22 +1,36 @@
+<!-- Container for the login section -->
 <div class="login-container">
+  <!-- Login form with an Angular ngSubmit directive to handle form submission -->
   <form class="login-form" (ngSubmit)="submit()">
+    <!-- Heading for the form -->
     <h2>Login</h2>
+
+    <!-- Container for the email input field -->
     <div class="input-container">
+      <!-- Email input field, bound to the email form control in the component -->
       <input [formControl]="fromGroup.controls.email" type="email" placeholder="Email" required>
+
+      <!-- Error message for the email field if it's required and has been touched -->
       <mat-error *ngIf="fromGroup.controls.email.hasError('required')&&fromGroup.controls.email.touched">
         The field is not allowed to be empty
       </mat-error>
+
+      <!-- Error message for the email field if it doesn't match the expected pattern and has been touched -->
       <mat-error *ngIf="fromGroup.controls.email.hasError('pattern')&&fromGroup.controls.email.touched">
         Must be a valid Email address.
       </mat-error>
     </div>
+
+    <!-- Container for the password input field -->
     <div class="input-container">
+      <!-- Password input field, bound to the password form control in the component -->
       <input [formControl]="fromGroup.controls.password" type="password" placeholder="Password" required>
     </div>
+
+    <!-- Login button -->
     <button class="loginButton" type="submit">Login</button>
+
+    <!-- Link to the registration page -->
     <button class="registerButton" routerLink="/auth/register" type="submit">Register</button>
   </form>
 </div>
-
-
-
