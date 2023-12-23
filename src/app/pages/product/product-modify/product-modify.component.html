@@ -1,56 +1,86 @@
+<!-- Main container for the product creation form -->
 <div class="Product-container">
+  <!-- Form element with Angular's ngSubmit directive for handling form submission -->
   <form class="product-form" (ngSubmit)="submit()">
+    <!-- Heading for the form -->
     <h2>Create Product</h2>
+
+    <!-- Series of input containers, each containing an input field and potential validation error message -->
+
+    <!-- Input for SKU (Stock Keeping Unit) -->
     <div class="input-container">
       <input [formControl]="fromGroup.controls.sku" type="text" placeholder="Sku" required>
+      <!-- Validation error message for SKU field -->
       <mat-error *ngIf="fromGroup.controls.sku.hasError('required') && fromGroup.controls.sku.touched">
         The field is not allowed to be empty
       </mat-error>
     </div>
+
+    <!-- Input for active status -->
     <div class="input-container">
       <input [formControl]="fromGroup.controls.active" type="text" placeholder="Is active" required>
+      <!-- Validation error message for active field -->
       <mat-error *ngIf="fromGroup.controls.active.hasError('required') && fromGroup.controls.active.touched">
         The field is not allowed to be empty
       </mat-error>
     </div>
+
+    <!-- Input for product name -->
     <div class="input-container">
       <input [formControl]="fromGroup.controls.name" type="text" placeholder="Name" required>
+      <!-- Validation error message for name field -->
       <mat-error *ngIf="fromGroup.controls.name.hasError('required') && fromGroup.controls.name.touched">
         The field is not allowed to be empty
       </mat-error>
     </div>
+
+    <!-- Input for product image URL -->
     <div class="input-container">
       <input [formControl]="fromGroup.controls.image" type="text" placeholder="Image" required>
+      <!-- Validation error message for image field -->
       <mat-error *ngIf="fromGroup.controls.image.hasError('required') && fromGroup.controls.image.touched">
         The field is not allowed to be empty
       </mat-error>
     </div>
+
+    <!-- Input for product description -->
     <div class="input-container">
       <input [formControl]="fromGroup.controls.description" type="text" placeholder="Description" required>
+      <!-- Validation error message for description field -->
       <mat-error *ngIf="fromGroup.controls.description.hasError('required') && fromGroup.controls.description.touched">
         The field is not allowed to be empty
       </mat-error>
     </div>
+
+    <!-- Input for product price -->
     <div class="input-container">
       <input [formControl]="fromGroup.controls.price" type="text" placeholder="Price" required>
+      <!-- Validation error message for price field -->
       <mat-error *ngIf="fromGroup.controls.price.hasError('required') && fromGroup.controls.price.touched">
         The field is not allowed to be empty
       </mat-error>
     </div>
+
+    <!-- Input for product stock quantity -->
     <div class="input-container">
       <input [formControl]="fromGroup.controls.stock" type="text" placeholder="Stock" required>
+      <!-- Validation error message for stock field -->
       <mat-error *ngIf="fromGroup.controls.stock.hasError('required') && fromGroup.controls.stock.touched">
         The field is not allowed to be empty
       </mat-error>
     </div>
+
+    <!-- Input for category ID -->
     <div class="input-container">
       <input [formControl]="fromGroup.controls.categoryId" type="text" placeholder="CategoryId" required>
+      <!-- Validation error message for categoryId field -->
       <mat-error *ngIf="fromGroup.controls.categoryId.hasError('required') && fromGroup.controls.categoryId.touched">
         The field is not allowed to be empty
       </mat-error>
     </div>
+
+    <!-- Submission and navigation buttons -->
     <button class="createButton" type="submit">Create</button>
     <button class="backButton" type="button" routerLink="/product/list">Back</button>
   </form>
 </div>
-
