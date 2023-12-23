@@ -1,60 +1,92 @@
+<!-- Container for the entire registration form -->
 <div class="login-container">
+  <!-- Form element with Angular's ngSubmit directive to handle form submission -->
   <form class="login-form" (ngSubmit)="submit()">
+    <!-- Heading for the registration form -->
     <h2>Registration</h2>
+
+    <!-- Input container for the first name -->
     <div class="input-container">
       <input [formControl]="fromGroup.controls.firstName" type="text" placeholder="First Name" required>
+      <!-- Error message for the first name field -->
       <mat-error *ngIf="fromGroup.controls.firstName.hasError('required') && fromGroup.controls.firstName.touched">
         The field is not allowed to be empty
       </mat-error>
     </div>
+
+    <!-- Input container for the last name -->
     <div class="input-container">
       <input [formControl]="fromGroup.controls.lastName" type="text" placeholder="Last Name" required>
+      <!-- Error message for the last name field -->
       <mat-error *ngIf="fromGroup.controls.lastName.hasError('required') && fromGroup.controls.lastName.touched">
         The field is not allowed to be empty
       </mat-error>
     </div>
+
+    <!-- Input container for the street name -->
     <div class="input-container">
       <input [formControl]="fromGroup.controls.street" type="text" placeholder="Street Name" required>
+      <!-- Error message for the street name field -->
       <mat-error *ngIf="fromGroup.controls.street.hasError('required') && fromGroup.controls.street.touched">
         The field is not allowed to be empty
       </mat-error>
     </div>
+
+    <!-- Input container for the zip code -->
     <div class="input-container">
-      <input [formControl]="fromGroup.controls.zip" type="text" placeholder="Zip Name" required>
+      <input [formControl]="fromGroup.controls.zip" type="text" placeholder="Zip Code" required>
+      <!-- Error message for the zip code field -->
       <mat-error *ngIf="fromGroup.controls.zip.hasError('required') && fromGroup.controls.zip.touched">
         The field is not allowed to be empty
       </mat-error>
     </div>
+
+    <!-- Input container for the city name -->
     <div class="input-container">
       <input [formControl]="fromGroup.controls.city" type="text" placeholder="City Name" required>
+      <!-- Error message for the city name field -->
       <mat-error *ngIf="fromGroup.controls.city.hasError('required') && fromGroup.controls.city.touched">
         The field is not allowed to be empty
       </mat-error>
     </div>
+
+    <!-- Input container for the country name -->
     <div class="input-container">
       <input [formControl]="fromGroup.controls.country" type="text" placeholder="Country Name" required>
+      <!-- Error message for the country name field -->
       <mat-error *ngIf="fromGroup.controls.country.hasError('required') && fromGroup.controls.country.touched">
         The field is not allowed to be empty
       </mat-error>
     </div>
+
+    <!-- Input container for the mobile phone -->
     <div class="input-container">
       <input [formControl]="fromGroup.controls.mobilePhone" type="text" placeholder="Mobile Phone" required>
+      <!-- Error message for the mobile phone field -->
       <mat-error *ngIf="fromGroup.controls.mobilePhone.hasError('required') && fromGroup.controls.mobilePhone.touched">
         The field is not allowed to be empty
       </mat-error>
     </div>
+
+    <!-- Input container for the email -->
     <div class="input-container">
-      <input [formControl]="fromGroup.controls.email" type="text" placeholder="email" required>
+      <input [formControl]="fromGroup.controls.email" type="text" placeholder="Email" required>
+      <!-- Error message for the email field -->
       <mat-error *ngIf="fromGroup.controls.email.hasError('required') && fromGroup.controls.email.touched">
         The field is not allowed to be empty
       </mat-error>
     </div>
+
+    <!-- Input container for the password -->
     <div class="input-container">
-      <input [formControl]="fromGroup.controls.password" type="text" placeholder="password" required>
+      <input [formControl]="fromGroup.controls.password" type="text" placeholder="Password" required>
+      <!-- Error message for the password field -->
       <mat-error *ngIf="fromGroup.controls.password.hasError('required') && fromGroup.controls.password.touched">
         The field is not allowed to be empty
       </mat-error>
     </div>
+
+    <!-- Submit button for the form -->
     <button type="submit">Register</button>
   </form>
 </div>
