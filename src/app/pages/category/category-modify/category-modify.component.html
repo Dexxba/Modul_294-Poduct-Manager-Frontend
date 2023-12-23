@@ -1,22 +1,34 @@
+<!-- Container for the category creation form -->
 <div class="Category-container">
+  <!-- Form element with Angular's ngSubmit directive to handle form submission -->
   <form class="category-form" (ngSubmit)="submit()">
+    <!-- Heading for the form -->
     <h2>Create Category</h2>
+
+    <!-- Input container for the 'active' status of the category -->
     <div class="input-container">
+      <!-- Input field for 'active' status, bound to a form control in the component's FormGroup -->
       <input [formControl]="fromGroup.controls.active" type="text" placeholder="Is Active" required>
+      <!-- Angular Material error message, displayed if 'active' field is touched and left empty -->
       <mat-error *ngIf="fromGroup.controls.active.hasError('required') && fromGroup.controls.active.touched">
         The field is not allowed to be empty
       </mat-error>
     </div>
+
+    <!-- Input container for the category name -->
     <div class="input-container">
+      <!-- Input field for category name, bound to a form control in the component's FormGroup -->
       <input [formControl]="fromGroup.controls.name" type="text" placeholder="Category Name" required>
+      <!-- Angular Material error message, displayed if 'name' field is touched and left empty -->
       <mat-error *ngIf="fromGroup.controls.name.hasError('required') && fromGroup.controls.name.touched">
         The field is not allowed to be empty
       </mat-error>
     </div>
-    <button class="createButton" type="submit" >Create</button>
+
+    <!-- Submit button for the form -->
+    <button class="createButton" type="submit">Create</button>
+
+    <!-- Back button, using Angular's routerLink directive for navigation -->
     <button class="backButton" type="button" routerLink="/category/list">Back</button>
   </form>
 </div>
-
-
-

@@ -1,65 +1,62 @@
+/* Styling for the container of the category form */
 .Category-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  display: flex; /* Using Flexbox for layout */
+  justify-content: center; /* Horizontally centers the content in the container */
+  align-items: center; /* Vertically centers the content in the container */
+  height: 100vh; /* Sets the height to be the full viewport height */
 }
 
+/* Styling for the form itself */
 .category-form {
-  background-color: #f5f5f5;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  max-width: 80%;
-  margin: auto;
+  background-color: #f5f5f5; /* Light gray background color */
+  padding: 30px; /* Padding inside the form */
+  border-radius: 8px; /* Rounded corners for the form */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth effect */
+  width: 300px; /* Fixed width of the form */
+  max-width: 80%; /* Ensures the form does not exceed 80% of its parent's width */
+  margin: auto; /* Centers the form in its parent container */
 }
+
+/* Styling for each input container within the form */
 .input-container {
-  margin-bottom: 15px;
+  margin-bottom: 15px; /* Space below each input container */
 }
 
+/* General styling for input fields */
 input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
+  width: 100%; /* Full width of the parent container */
+  padding: 10px; /* Padding inside the input fields */
+  border: 1px solid #ccc; /* Light gray border for the input fields */
+  border-radius: 5px; /* Slightly rounded corners for the input fields */
+  box-sizing: border-box; /* Ensures padding does not increase the size of the input fields */
 }
 
-button[type="submit"] {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  background-color: #3498db;
-  color: white;
-  text-transform: uppercase;
-  font-weight: bold;
-  box-shadow: 0 9px 4px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-button[type="button"] {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  background-color: #3498db;
-  color: white;
-  text-transform: uppercase;
-  font-weight: bold;
-  box-shadow: 0 9px 4px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+/* Styling for the submit button */
+button[type="submit"], button[type="button"] {
+  width: 100%; /* Full width of the parent container */
+  padding: 10px; /* Padding inside the button */
+  border: none; /* No border for the button */
+  border-radius: 4px; /* Slightly rounded corners for the button */
+  background-color: #3498db; /* Blue background color for the button */
+  color: white; /* White text color */
+  text-transform: uppercase; /* Uppercase text */
+  font-weight: bold; /* Bold font weight */
+  box-shadow: 0 9px 4px rgba(0, 0, 0, 0.2); /* Shadow for a "raised button" effect */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth color transition for hover effect */
 }
 
+/* Hover effect for the submit button */
 button[type="submit"]:hover {
-  background-color: #2980b9;
-}
-.createButton{
-  margin-bottom: 10px;
+  background-color: #2980b9; /* Darker blue color on hover */
 }
 
+/* Additional styling for the create button */
+.createButton {
+  margin-bottom: 10px; /* Space below the create button */
+}
+
+/* Styling for error messages (likely used with Angular Material) */
 mat-error {
-  color: red;
+  color: red; /* Red color for error messages */
 }
